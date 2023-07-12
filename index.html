@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GoTrip</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <section class="main">
+        <div class="container">
+            <nav class="nav">
+
+                <div class="nav__logo">GoTrieop</div>
+                <div class="nav__menu">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Contack</a>
+                </div>
+
+                <a href="#" onclick="openModal(event)" class="signup">Sign up</a>
+                <button onclick="openModal(event)" class="login">Login</button>
+
+
+                <div class="menu-wrap">
+                    <input type="checkbox" class="toggler">
+                    <div class="hamburger">
+                        <div></div>
+                    </div>
+                    <div class="menu">
+                        <div>
+                            <div>
+                                <ul>
+                                    <li> <a href="#">Home</a></li>
+                                    <li> <a href="#">Services</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">Contack</a></li>
+                                    <a href="#" onclick="openModal(event)" id="signup_ham">Sign up</a>
+                                    <button onclick="openModal(event)" id="login_ham">Login</button>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </nav>
+            <div class="main__label">
+                exsplore the world
+            </div>
+            <div class="main__header">
+                <h1>Explore The Natural
+                    <br>
+                    Beauty Of Halmahera
+                    <br>
+                    With Us
+                </h1>
+
+            </div>
+            <div class="main__subheader">
+                explore the beauty of god's earth in a
+                <br> beautiful forest and have fun
+            </div>
+            <button onclick="openModal(event)" class="main__button button">Exsplore Now</button>
+        </div>
+
+    </section>
+
+
+    <section class="choise">
+        <div class="choise-container">
+            <div class="choise__text">
+                <div class="choise__header">Choice Of </div>
+                <div class="choise__secondheader">Destinations</div>
+                <div class="choise__subheader">explore the beauty of god's earth in
+                    <br> a beautiful forest and have fun
+                </div>
+                <button onclick="openModal(event)" class="choise__button button">Explore now</button>
+            </div>
+            <div class="slider-container">
+                <div class="image-slider">
+                    <div><img src="img/slider1.png" alt="Зображення 1"></div>
+                    <div><img src="img/slider2.png" alt="Зображення 2"></div>
+                    <div><img src="img/slider1.png" alt="Зображення 4"></div>
+                    <div><img src="img/slider2.png" alt="Зображення 5"></div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <section class="review">
+        <div class="review-container">
+            <div class="review__img">
+                <img id="reviewimg" src="img/review.png" alt="review">
+            </div>
+            <div class="alpanasap">
+                <div class="review__header">What do customers say about us?</div>
+
+                <div class="alpanasap__img">
+                    <img src="img/alpanasap.png" alt="img">
+                </div>
+                <div class="alpanasap__profile">
+                    <div class="alpanasap__name">Alpanasap</div>
+                    <div class="alpanasap__location">Japung, Indonesia</div>
+
+                </div>
+                <div class="alpanasap__review">Very satisfying service makes it comfortable, a beautiful place in the
+                    world. </div>
+                <div class="stars"><img id="stars" src="img/stars.png" alt="stars"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="start">
+        <div class="start__header">
+            Prepare Yourself And <br>
+            Start Exploring With Us.
+        </div>
+        <div class="start__subheader">There's the best discount for you today.</div>
+        <button onclick="openModal(event)" class="button start__button">Get Started</button>
+    </section>
+
+
+    <section class="subscribe">
+        <div class="container">
+            <div class="subscribe__header">Subscribe
+                To Our Newsletter</div>
+
+        
+                <button class="btn btn-primary submit button" onclick="openModal(event)">Submit</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer__logo">
+                GoTrieop
+            </div>
+            <div class="footer__menu">
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Pricing</a>
+                <a href="#">Contack</a>
+            </div>
+
+            <a href="#" onclick="openModal(event)" class="signup">Sign up</a>
+            <button onclick="openModal(event)" class="button login">Login</button>
+
+            <div class="footer__menu-wrap">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li> <a href="#">Home</a></li>
+                                <li> <a href="#">Services</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Contack</a></li>
+                                <a href="#" onclick="openModal(event)" class="signup_ham">Sign up</a>
+                                <button onclick="openModal(event)" class="login_ham button ">Login</button>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <section id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+
+
+            <div class="form-group">
+                <h5 for="name">Name</h5>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" />
+            </div>
+            <div class="form-group">
+                <h5 for="email">Email</h5>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" />
+            </div>
+            <button class="btn btn-primary button" onclick="sendMail()">Submit</button>
+
+
+        </div>
+    </section>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("jp3T06pOHwjAG6ITv");
+        })();
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
