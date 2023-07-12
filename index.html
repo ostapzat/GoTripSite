@@ -142,9 +142,9 @@
             <div class="subscribe__header">Subscribe
                 To Our Newsletter</div>
 
-        
-                <button class="btn btn-primary submit button" onclick="openModal(event)">Submit</button>
-            </div>
+
+            <button class="btn btn-primary submit button" onclick="openModal(event)">Submit</button>
+        </div>
 
         </div>
     </section>
@@ -194,18 +194,18 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
 
-
-            <div class="form-group">
-                <h5 for="name">Name</h5>
-                <input type="text" class="form-control" id="name" placeholder="Enter name" />
-            </div>
-            <div class="form-group">
-                <h5 for="email">Email</h5>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" />
-            </div>
-            <button class="btn btn-primary button" onclick="sendMail()">Submit</button>
-
-
+            <form action="your-email-service-url" method="post">
+                <div class="form-group">
+                    <h5 for="name">Name</h5>
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" required />
+                </div>
+                <div class="form-group">
+                    <h5 for="email">Email</h5>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" required
+                        pattern="[^\s@]+@[^\s@]+\.[^\s@]+" />
+                </div>
+                <button type="submit" class="btn btn-primary button">Submit</button>
+            </form>
         </div>
     </section>
 
@@ -213,7 +213,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            emailjs.init("jp3T06pOHwjAG6ITv");
+            emailjs.init("8BVmxxKngn7GEH__k");
         })();
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
