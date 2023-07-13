@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="icon" href="img/gotrip_logo_335x100.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <section class="main">
+    <section class="main ">
         <div class="container">
-            <nav class="nav">
+            <nav class="nav wow animate__animated animate__flipInX">
 
                 <div class="nav__logo">GoTrieop</div>
                 <div class="nav__menu">
@@ -54,30 +55,33 @@
 
 
             </nav>
-            <div class="main__label">
-                exsplore the world
-            </div>
-            <div class="main__header">
-                <h1>Explore The Natural
-                    <br>
-                    Beauty Of Halmahera
-                    <br>
-                    With Us
-                </h1>
+            <div class="content wow animate__animated animate__fadeInLeft ">
+                <div class="main__label ">
+                    exsplore the world
+                </div>
+                <div class="main__header wow animate__fadeInLeft">
+                    <h1>Explore The Natural
+                        <br>
+                        Beauty Of Halmahera
+                        <br>
+                        With Us
+                    </h1>
 
+                </div>
+                <div class="main__subheader">
+                    explore the beauty of god's earth in a
+                    <br> beautiful forest and have fun
+                </div>
+                <button onclick="openModal(event)" class="main__button button">Exsplore Now</button>
             </div>
-            <div class="main__subheader">
-                explore the beauty of god's earth in a
-                <br> beautiful forest and have fun
-            </div>
-            <button onclick="openModal(event)" class="main__button button">Exsplore Now</button>
+
         </div>
 
     </section>
 
 
-    <section class="choise">
-        <div class="choise-container">
+    <section class="choise ">
+        <div class="choise-container wow animate__animated animate__backInRight">
             <div class="choise__text">
                 <div class="choise__header">Choice Of </div>
                 <div class="choise__secondheader">Destinations</div>
@@ -103,7 +107,7 @@
     </section>
 
 
-    <section class="review">
+    <section class="review wow animate__animated animate__jackInTheBox">
         <div class="review-container">
             <div class="review__img">
                 <img id="reviewimg" src="img/review.png" alt="review">
@@ -127,7 +131,7 @@
     </section>
 
 
-    <section class="start">
+    <section class="start wow animate__animated animate__bounceInUp">
         <div class="start__header">
             Prepare Yourself And <br>
             Start Exploring With Us.
@@ -137,7 +141,7 @@
     </section>
 
 
-    <section class="subscribe">
+    <section class="subscribe wow animate__animated animate__backInRight">
         <div class="container">
             <div class="subscribe__header">Subscribe
                 To Our Newsletter</div>
@@ -149,7 +153,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer wow animate__animated animate__jello">
         <div class="footer-container">
             <div class="footer__logo">
                 GoTrieop
@@ -158,7 +162,7 @@
                 <a href="#">Home</a>
                 <a href="#">Services</a>
                 <a href="#">Pricing</a>
-                <a href="#">Contack</a>
+                <a href="#">Contact</a>
             </div>
 
             <a href="#" onclick="openModal(event)" class="signup">Sign up</a>
@@ -176,7 +180,7 @@
                                 <li> <a href="#">Home</a></li>
                                 <li> <a href="#">Services</a></li>
                                 <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Contack</a></li>
+                                <li><a href="#">Contact</a></li>
                                 <a href="#" onclick="openModal(event)" class="signup_ham">Sign up</a>
                                 <button onclick="openModal(event)" class="login_ham button ">Login</button>
                             </ul>
@@ -190,25 +194,76 @@
     </footer>
 
 
-    <section id="myModal" class="modal">
+    <section id="myModal" class="modal wow animate__animated animate__zoomIn">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
 
-            <form action="your-email-service-url" method="post">
-                <div class="form-group">
-                    <h5 for="name">Name</h5>
-                    <input type="text" class="form-control" id="name" placeholder="Enter name" required />
-                </div>
-                <div class="form-group">
-                    <h5 for="email">Email</h5>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" required
-                        pattern="[^\s@]+@[^\s@]+\.[^\s@]+" />
-                </div>
-                <button type="submit" class="btn btn-primary button">Submit</button>
-            </form>
+
+            <div class="form-group">
+                <h5 for="name">Name</h5>
+                <input type="text" class="form-control" id="name" required placeholder="Enter name" />
+            </div>
+            <span id="nameError" class="error"></span>
+
+            <div class="form-group">
+                <h5 for="email">Email</h5>
+                <input type="email" class="form-control" id="email" required placeholder="Enter email" />
+            </div>
+            <span id="emailError" class="error"></span>
+
+            <div class="form-group">
+                <h5 for="password">Password</h5>
+                <input class="form-control" placeholder="Enter password" id="password" required type="password" />
+            </div>
+            <span id="passwordError" class="error"></span>
+
+            <button id="submitButton" class="btn button btn-primary" onclick="sendMail()">Submit</button>
+
+
         </div>
     </section>
 
+    <button id="scrollUpButton" class="hidden">↑</button>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        #scrollUpButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #FF7B4E;
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            color: #fff;
+            font-size: 50px;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+        }
+
+        @media (max-width: 769px) {
+            #scrollUpButton {
+                position: fixed;
+                bottom: 60px;
+                right: 20px;
+
+                width: 40px;
+                height: 39px;
+
+                font-size: 40px;
+
+
+            }
+        }
+    </style>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
